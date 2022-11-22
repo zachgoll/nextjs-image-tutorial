@@ -13,13 +13,17 @@ const demos = [
     display: "Static vs. Remote images",
   },
   {
-    key: "responsive",
-    display: "Responsive images",
+    key: "responsive-fixed",
+    display: "Responsive fixed images",
+  },
+  {
+    key: "responsive-fill",
+    display: "Responsive fill images",
   },
 ];
 
 export default function Home() {
-  const [demo, setDemo] = useState(demos[0]);
+  const [demo, setDemo] = useState(demos[1]);
 
   return (
     <div>
@@ -107,41 +111,101 @@ export default function Home() {
           )}
         </Listbox>
 
-        {demo.key === "static-remote" ? (
-          <div>
-            <div className="relative">
+        <div className="mt-8">
+          {demo.key === "static-remote" ? (
+            <div>
+              {/* <div className="relative">
+                <Image
+                  src={mountainLake}
+                  alt="Mountain lake"
+                  className="shadow-lg rounded"
+                  // sizes="(max-width: 768px) "
+                />
+                <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+                  <span className="text-2xl font-medium text-white bg-stone-900 bg-opacity-20 p-2">
+                    Local image
+                  </span>
+                </div>
+              </div> */}
+
+              <div className="relative h-72">
+                <Image
+                  src={
+                    "https://images.unsplash.com/photo-1482192505345-5655af888cc4"
+                  }
+                  alt="Mountain lake"
+                  // width={4513}
+                  // height={3009}
+                  fill
+                  className="shadow-lg rounded object-cover"
+                />
+                <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+                  <span className="text-2xl font-medium text-white bg-stone-900 bg-opacity-20 p-2">
+                    Remote image
+                  </span>
+                </div>
+              </div>
+            </div>
+          ) : demo.key === "responsive-fixed" ? (
+            // <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
               <Image
                 src={mountainLake}
                 alt="Mountain lake"
-                className="shadow-lg rounded mt-10"
+                className="shadow-lg rounded"
               />
-              <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-                <span className="text-2xl font-medium text-white bg-stone-900 bg-opacity-20 p-2">
-                  Local image
-                </span>
-              </div>
-            </div>
 
-            <div className="relative">
-              <Image
-                src={
-                  "https://images.unsplash.com/photo-1482192505345-5655af888cc4"
-                }
+              {/* <Image
+                src={mountainLake}
                 alt="Mountain lake"
-                width={4513}
-                height={3009}
-                className="shadow-lg rounded mt-6"
+                className="shadow-lg rounded"
               />
-              <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-                <span className="text-2xl font-medium text-white bg-stone-900 bg-opacity-20 p-2">
-                  Remote image
-                </span>
+
+              <Image
+                src={mountainLake}
+                alt="Mountain lake"
+                className="shadow-lg rounded"
+              /> */}
+            </div>
+          ) : demo.key === "responsive-fill" ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="relative h-72">
+                <Image
+                  src={
+                    "https://images.unsplash.com/photo-1482192505345-5655af888cc4"
+                  }
+                  alt="Mountain lake"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="relative h-72">
+                <Image
+                  src={
+                    "https://images.unsplash.com/photo-1482192505345-5655af888cc4"
+                  }
+                  alt="Mountain lake"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="relative h-72">
+                <Image
+                  src={
+                    "https://images.unsplash.com/photo-1482192505345-5655af888cc4"
+                  }
+                  alt="Mountain lake"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
-          </div>
-        ) : (
-          <p>placeholder</p>
-        )}
+          ) : (
+            <p>Ph</p>
+          )}
+        </div>
       </main>
     </div>
   );
