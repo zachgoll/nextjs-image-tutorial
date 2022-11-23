@@ -10,8 +10,8 @@ export function CustomLoader(props: {
   return (
     <div>
       <p className="mb-4 text-sm">
-        With a custom loader, you are telling Next.js "do not optimize this
-        image, let me do all my optimizations using another service".
+        With a custom loader, you are telling Next.js &quot;do not optimize this
+        image, let me do all my optimizations using another service&quot;.
       </p>
 
       <Image

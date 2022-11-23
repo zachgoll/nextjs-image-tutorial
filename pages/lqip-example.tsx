@@ -57,9 +57,9 @@ export default function LqipExample({ image }: LqipExampleProps) {
 
           <p>
             A low-quality image placeholder is exactly what it sounds like. It
-            is a super low quality version of an image that doesn't take as long
-            to load and is placed in the UI until the larger image loads over
-            the network.
+            is a super low quality version of an image that doesn&lsquo;t take
+            as long to load and is placed in the UI until the larger image loads
+            over the network.
           </p>
         </div>
       </main>
