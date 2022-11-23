@@ -1,3 +1,10 @@
+# A complete guide to the Next.js Image Component
+
+## Why??
+
+- The Next.js Image component is **powerful**, yet often misused (and even potentially _dangerous_)
+- I needed this tutorial myself
+
 ## Prerequisites
 
 - Some experience with Next.js and React
@@ -22,3 +29,4 @@
 - https://nextjs.org/docs/api-reference/next/image
 - https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
 - https://www.mydevice.io/
+- https://developers.google.com/speed/webp

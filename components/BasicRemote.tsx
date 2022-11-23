@@ -4,11 +4,12 @@ export function BasicRemote() {
   return (
     <div className="space-y-6">
       <Image
+        // Because we don't provide a loader, Vercel will optimize this image
         src="https://images.unsplash.com/photo-1482192505345-5655af888cc4"
         alt="Mountains fill image"
         className="rounded object-cover"
-        width={4513}
-        height={3009}
+        width={4544}
+        height={2840}
       />
 
       <p>

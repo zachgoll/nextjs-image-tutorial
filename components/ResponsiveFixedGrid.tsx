@@ -12,8 +12,8 @@ export function ResponsiveFixedGrid() {
           alt="Mountains static image"
           placeholder="blur"
           className="rounded"
-          sizes="(max-width: 576px) 100vw,
-               (max-width: 1440px) 50vw,
+          sizes="(max-width: 640px) 100vw,
+               (max-width: 1024px) 50vw,
                33vw"
         />
       ))}

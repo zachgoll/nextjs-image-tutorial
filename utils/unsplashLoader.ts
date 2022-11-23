@@ -1,4 +1,4 @@
-import { ImageLoader } from "next/image";
+import type { ImageLoader } from "next/image";
 
 export function normalizeUnsplashUrl(src: string) {
   const unsplashBaseUrl = "https://images.unsplash.com";

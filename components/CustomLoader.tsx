@@ -20,6 +20,7 @@ export function CustomLoader(props: {
         alt="Custom Nextjs image loader example"
         width={props.width}
         height={props.height}
+        quality={60}
         sizes="100vw"
       />
     </div>

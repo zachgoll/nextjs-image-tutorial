@@ -52,7 +52,10 @@ export default function LqipExample({ image }: LqipExampleProps) {
             loader={unsplashLoader}
             alt="lqip-example"
             placeholder="blur"
-            {...image}
+            src={image.src}
+            width={image.width}
+            height={image.height}
+            blurDataURL={image.blurDataURL}
           />
 
           <p>
